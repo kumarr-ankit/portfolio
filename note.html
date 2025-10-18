@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./notes.css">
+
+</head>
+
+<body id="body">
+    <header>
+
+        <nav id="navbar">
+            <div id="header-container">
+                <b> <b id="app-name">Todo Tracker</b></b>
+                <span id="app-det">A simple todo app to manage day to day tasks/notes</span>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+
+
+        <div class="information-container">
+            <b id="title-text">
+                Hello World
+            </b>
+            <p id="desc-text">
+                Hello World
+            </p>
+            <div id="due">12-12-2025</div>
+        </div>
+
+
+        <div id="form-container">
+            <h1 class="page-title">Create a new note 🗒️</h1>
+            <div class="close-btn" id="close-btn">X</div>
+            <form id="form1">
+                <label for="title">Todo's Title : </label>
+                <input type="text" placeholder="What's is title ?" name="title" id="title" required>
+                <label for="desc">Description : </label>
+                <input type="text" placeholder="Write something about title...." name="desc" id="desc" required>
+                <label for="dueDate">Deadline : </label>
+                <input type="date" placeholder="Due date ?" name="dueAt" id="dueDate" required>
+                <button type="submit" id="note-form-btn">submit</button>
+            </form>
+        </div>
+
+        <div id="editor">
+
+            <div class="close-btn" id="close-btn-editor">X</div>
+            <h1 class="page-title">Edit Note 📝</h1>
+            <form class="edit-note-form" id="editor-form">
+
+                <div class="form-group">
+                    <label for="title-ed" class="form-label">Title</label><br>
+                    <input type="text" id="title-ed" name="title" class="form-input-title-input">
+                </div>
+                <div class="form-group">
+                    <label for="dueAt-ed" class="form-label">Due At</label><br>
+                    <input type="date" id="dueAt-ed" name="dueAt" class="form-input-due-at-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="desc-ed" class="form-label">Description</label><br>
+                    <input id="desc-ed" name="desc" class="form-textarea-desc-input"
+                        placeholder="Existing note description...">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn save-btn" id="save-edit">Save Changes</button>
+                    <button type="button" class="btn cancel-btn" id="cancel-editor">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="add-note">
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/new-sticky-note-icon-svg-download-png-11575633.png?f=webp&w=25"
+                alt="" />
+            <span>Add new todo</span>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Thanks 💖 | Todo Tracker
+        </p>
+        <div id="feedback-res">
+            Successfully deleted <span><img src="./src/assets/success.svg" /></span>
+        </div>
+        <button id="mode"><img src="./src/assets/moon2.svg" alt="darkmode" title="Enable Dark mode"
+                id="mode-img"></button>
+    </footer>
+
+    <script src="./notes.js"></script>
+</body>
+
+</html>

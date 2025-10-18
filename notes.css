@@ -1,0 +1,505 @@
+* {
+
+
+  border-radius: 8px;
+  box-sizing: border-box;
+
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --radius-normal: 16px;
+  --radius-curve: 20px;
+
+  --main-color: #ffffff;
+  --appNameColor: black;
+  --appDet: #909193;
+  --text-normalColor: black;
+  /* Deep Blue - for headers, nav */
+  --main-color-secondary: #fdfdfd;
+  /* Slightly lighter for hover states or buttons */
+
+  --color-ocean: #1365bc;
+  /* Primary action button color */
+  --color-ocean-secondary: #468faf;
+  /* Card headers, tags */
+
+  --color-sky: #61a5c2;
+  /* Backgrounds, secondary buttons */
+  --color-sky-secondary: #89c2d9;
+  /* Input borders, light hovers */
+
+  --color-sky-white: #a9d6e5;
+  /* Light background, section separators */
+  --color-sky-white-secondary: #caf0f8;
+  /* Highlight boxes, hover areas */
+
+  --color-light: #f9f9f9;
+  /* Very light background — almost white but blue-tinted */
+  --color-single-note-bg: #ffffff;
+}
+
+
+.dark {
+  --main-color: #282828;
+  /* Light cyan for contrast */
+  --main-color-secondary: #6db4b8;
+  /* Slightly darker, subtle hover */
+  --appNameColor: white;
+  --appDet: #dcefff;
+  --text-normalColor: white;
+  --color-ocean: #45858c;
+  /* Muted teal */
+  --color-ocean-secondary: #5fa3a7;
+  /* Soft teal-blue */
+
+  --color-sky: #497987;
+  /* Darker sky blue */
+  --color-sky-secondary: #3e6472;
+  /* For borders and light hovers */
+
+  --color-sky-white: #2f3e46;
+  /* Very dark desaturated background */
+  --color-sky-white-secondary: #354f52;
+  /* Hover areas or boxes */
+
+  --color-light: #1a1a1a;
+  /* Base background (almost black) */
+  --color-single-note-bg: #2b2929;
+  /* Slightly lighter card/note bg */
+}
+
+* {
+
+
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+
+
+
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-normalColor);
+  background-color: var(--main-color);
+  border-radius: 0;
+
+}
+
+/* Header Style */
+
+#navbar {
+
+  text-align: center;
+  z-index: 300px;
+  border-radius: 2px;
+  position: fixed;
+  border: 0.5pt solid var(--main-color);
+  border-style: none;
+  user-select: none;
+  backdrop-filter: blur(3.5px);
+  top: 0;
+  width: 100vw;
+  margin-left: 0.1px;
+  justify-self: center;
+  padding: 10px 15px;
+  overflow-y: hidden;
+  box-sizing: content-box;
+  z-index: 320;
+
+
+
+}
+
+#app-name {
+
+  padding: 0px;
+  text-align: center;
+  font-size: xx-large;
+  color: var(--appNameColor);
+  text-shadow: 0px 0px 1px black;
+
+}
+
+#app-det {
+  margin-top: -2px;
+  border-radius: 0px;
+
+  padding-block: 2px;
+  color: var(--appDet);
+  display: block;
+
+}
+
+
+
+/* Footer Style */
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  position: relative;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  justify-self: center;
+  background-color: var(--main-color);
+}
+
+#add-note {
+  position: fixed;
+  /* stay fixed */
+  bottom: 20px;
+  /* distance from top */
+  right: 12px;
+  user-select: none;
+  /* distance from right */
+  height: 10%;
+  width: fit-content;
+  padding: 0px 18px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--color-ocean);
+  border-radius: 14px;
+  border: 1pt solid var(--main-color);
+
+  z-index: 999;
+}
+
+#add-note:hover {
+  scale: 1.01;
+  box-shadow: 1px 1px 6px 1px black;
+  cursor: pointer;
+}
+
+#add-note span {
+  margin-right: 2px;
+
+}
+
+#add-note img {
+  margin-right: 12px;
+
+
+}
+
+input {
+  background-color: var(--main-color);
+  color: var(--appNameColor);
+}
+
+#form-container,
+#editor {
+  border: 1px solid black;
+  background: linear-gradient(115deg, #1365bcd9, var(--appDet));
+
+  backdrop-filter: blur(2.5px);
+  width: 99vw;
+  margin-inline: auto;
+  height: 99vh;
+  margin-block: auto;
+  position: fixed;
+  top: 2px;
+  left: 0;
+  display: none;
+  right: 0;
+  z-index: 1000;
+  animation-name: formAnim;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+
+
+}
+
+#editor {
+  animation: none;
+}
+
+#form-container form,
+#editor form {
+  display: flex;
+  padding-top: 10%;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-container form label,
+#editor form label {
+  text-align: start;
+  justify-self: flex-start;
+  padding-left: 12px;
+  width: 28%;
+}
+
+form input,
+textarea,
+button {
+  height: fit-content;
+  width: fit-content;
+  max-width: 95vw;
+  min-width: 400px;
+  min-height: 52px;
+  margin: 12px;
+  text-align: start;
+  padding-left: 12px;
+  border: 1px;
+  padding: 8px;
+}
+
+form input {
+  outline: 1px rgb(213, 161, 4) solid;
+}
+
+form button {
+  text-align: center;
+  background-color: rgb(18, 19, 18);
+  box-shadow: 0px 0px 8px 1px gray;
+  border: 1px solid black;
+  cursor: pointer;
+  color: wheat;
+}
+
+form button:hover {
+  background-color: rgb(52, 55, 52);
+  cursor: pointer;
+}
+
+.close-btn {
+  width: fit-content;
+  height: fit-content;
+  color: var(--appNameColor);
+  border-radius: 6px;
+  padding: 12px;
+  padding-inline: 20px;
+  background: var(--main-color);
+  text-align: center;
+  display: inline;
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #b30404;
+  color: white;
+  scale: 110.2%;
+}
+
+.form-actions {
+  width: min-content;
+}
+
+.page-title {
+  position: absolute;
+  left: 20px;
+
+  display: block;
+}
+
+
+#mode {
+
+  background: transparent;
+  position: fixed;
+  bottom: 12px;
+  left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  width: 50px;
+  padding: 12px;
+  z-index: 100;
+
+
+}
+
+#mode img {
+  background: var(--color-ocean);
+  padding: 16px;
+  border-radius: 50%;
+}
+
+#mode img:hover {
+  background-color: var(--color-ocean-secondary);
+  scale: 1.05;
+  cursor: pointer;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.634);
+}
+
+.dropdown-btn {
+  border: 1px solid grey;
+  background-image: url("./src/assets/three.svg");
+  background-size: cover;
+  position: relative;
+  top: 25px;
+  left: 4px;
+  z-index: 10;
+  height: 20px;
+  width: 20px;
+
+}
+
+.dropdown-btn:hover {
+  background-image: url("./src/assets/close.svg");
+  border: 1px solid transparent;
+
+}
+
+.dropdown {
+  border: 1pt solid grey;
+  width: fit-content;
+  padding: 10px 4px;
+
+  visibility: collapse;
+  background-color: var(--main-color);
+  backdrop-filter: blur(106.5);
+  box-shadow: 0px 0px 4px gray;
+
+}
+
+
+.dropdown li {
+  min-width: 150px;
+  padding: 4px;
+  padding-left: 12px;
+  border-radius: 20px;
+  list-style: none;
+  border-radius: var(--radius-curve);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.dropdown li span {
+  vertical-align: middle;
+
+}
+
+.dropdown li span img {
+  height: 25px;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  padding-right: 4px;
+}
+
+.dropdown li:hover {
+  background-color: var(--color-ocean);
+  color: white;
+}
+
+.dropdown-btn:hover>.dropdown {
+  visibility: visible;
+
+}
+
+#feedback-res {
+  background-color: #c30000;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 20px;
+  left: 12px;
+  display: inline-block;
+  z-index: 200;
+  visibility: collapse;
+
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  box-sizing: border-box;
+}
+
+#feedback-res span img {
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+
+
+@media (max-width:434px) {
+
+  #add-note {
+
+    background: transparent;
+    position: fixed;
+    bottom: 14px;
+    right: 45px;
+    display: flex;
+    justify-content: flex-start;
+    width: 50px;
+    padding: 12px;
+    border: none;
+  }
+
+  #add-note span {
+    display: none;
+  }
+
+  #add-note img {
+    background: var(--color-ocean);
+    padding: 15px;
+    border-radius: 50%;
+  }
+
+
+}
+
+@keyframes formAnim {
+  0% {
+
+    scale: 0.01;
+    left: 50vw;
+    right: 0;
+    top: 200vh;
+    bottom: 0;
+  }
+
+  100% {
+    scale: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+  }
+}
+
+.information-container{
+  
+  border: 1px solid gray;
+  padding: 12px;
+  margin: 4px;
+  margin-top: 120px;
+  height: fit-content;
+  min-height: 500px;
+  background-color: var(--main-color);
+  box-shadow: 1px 1px 8px 1px rgba(128, 128, 128, 0.425);
+}
+
+.information-container b{
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.information-container p{
+  font: optional;
+}
