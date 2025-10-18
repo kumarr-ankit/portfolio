@@ -30,3 +30,4 @@ modeBtn.addEventListener("click", (e) => {
 
 //nav animation 
 
+

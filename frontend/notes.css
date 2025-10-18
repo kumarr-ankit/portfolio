@@ -89,8 +89,10 @@
 #body {
 
 
-
+overflow-x: hidden;
   min-height: 100vh;
+  height: fit-content;
+  width: 99vw;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -104,7 +106,7 @@
 
 #navbar {
 
-  text-align: center;
+
   z-index: 300px;
   border-radius: 2px;
   position: fixed;
@@ -115,9 +117,9 @@
   top: 0;
   width: 100vw;
   margin-left: 0.1px;
-  justify-self: center;
+  justify-self: start;
   padding: 10px 15px;
-  overflow-y: hidden;
+  
   box-sizing: content-box;
   z-index: 320;
 
@@ -138,10 +140,11 @@
 #app-det {
   margin-top: -2px;
   border-radius: 0px;
-
+  font-size: small;
   padding-block: 2px;
   color: var(--appDet);
   display: block;
+  font-weight: lighter;
 
 }
 
@@ -157,7 +160,18 @@ footer {
   left: 0;
   right: 0;
   justify-self: center;
+
   background-color: var(--main-color);
+}
+
+footer p {
+  position: relative;
+  top: 340px;
+  left: auto;
+  right: auto;
+  height: fit-content;
+  width: fit-content;
+ 
 }
 
 #add-note {
@@ -484,22 +498,23 @@ form button:hover {
   }
 }
 
-.information-container{
-  
+.information-container {
+
   border: 1px solid gray;
   padding: 12px;
   margin: 4px;
   margin-top: 120px;
   height: fit-content;
-  min-height: 500px;
+  min-height: 200px;
   background-color: var(--main-color);
-  box-shadow: 1px 1px 8px 1px rgba(128, 128, 128, 0.425);
+  box-shadow: 1px 1px 8px 1px transparent;
 }
 
-.information-container b{
+.information-container b {
   font-size: x-large;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.information-container p{
+
+.information-container p {
   font: optional;
 }
