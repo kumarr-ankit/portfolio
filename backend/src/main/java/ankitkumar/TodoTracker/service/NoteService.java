@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ public class NoteService {
     @Autowired
     private NoteRepo noteRepo;
     NoteMapper noteMapper = new NoteMapper();
+
     public String delete(String id) {
 
         try {
@@ -40,22 +42,27 @@ public class NoteService {
             resNoteDtos.add(noteMapper.toResNoteDto(e));
         });
 
-
         return ResponseEntity.status(HttpStatus.OK).body(resNoteDtos);
     }
 
     public ResponseEntity<ResNoteDto> getById(Long id) {
-        NoteEntity noteEntity = noteRepo.findById(id).orElseThrow(() -> new IllegalArgumentException("error occurred while finding todo with id : " + id));
-        ResNoteDto resNoteDto = noteMapper.toResNoteDto(noteEntity);
-        return ResponseEntity.status(HttpStatus.OK).body(resNoteDto);
+         ResNoteDto resNoteDto = new ResNoteDto();
+        try {
+            NoteEntity noteEntity = noteRepo.findById(id).orElseThrow(
+                    () -> new IllegalArgumentException("error occurred while finding todo with id : " + id));
+             resNoteDto = noteMapper.toResNoteDto(noteEntity);
+        } catch (Exception e) {
+            System.out.println(e.getLocalizedMessage());
+        }
+         return ResponseEntity.status(HttpStatus.OK).body(resNoteDto);
     }
 
     public ResponseEntity<String> addNote(ReqNoteDto reqNoteDto) {
-        //  System.out.println(reqNoteDto);
+        // System.out.println(reqNoteDto);
         NoteEntity entity = noteMapper.toEntity(reqNoteDto);
 
         System.out.println(entity);
-        if(noteRepo != null && entity != null){
+        if (noteRepo != null && entity != null) {
             NoteEntity e = noteRepo.save(entity);
             System.out.println(e);
         }
@@ -64,34 +71,39 @@ public class NoteService {
 
     }
 
+    public String update(ReqNoteDto br, long id) {
 
-    public String update(ReqNoteDto br,long id) {
+        // try{
 
-//       try{
+        NoteEntity entity = noteRepo.findById(id).orElseThrow(() -> new IllegalArgumentException("Error"));
+        NoteEntity reqEntity = noteMapper.toEntity(br);
 
-           NoteEntity entity = noteRepo.findById(id).orElseThrow(()-> new IllegalArgumentException("Error"));
-           NoteEntity reqEntity = noteMapper.toEntity(br);
+        if (reqEntity.getTitle().isEmpty() && reqEntity.getDueAt() == null && reqEntity.getDesc().isEmpty())
+            return "empty";
 
-           if(reqEntity.getTitle().isEmpty() && reqEntity.getDueAt() == null && reqEntity.getDesc().isEmpty()) return "empty";
+        if (reqEntity.getTitle() != null) {
+            entity.setTitle(reqEntity.getTitle());
+        }
+        if (reqEntity.getDueAt() != null) {
+            entity.setDueAt(reqEntity.getDueAt());
+        }
 
+        if (reqEntity.getDesc() != null) {
+            entity.setDesc(reqEntity.getDesc());
+        }
 
-           if(reqEntity.getTitle() != null){
-               entity.setTitle(reqEntity.getTitle());
-           }
-           if(reqEntity.getDueAt() != null){
-               entity.setDueAt(reqEntity.getDueAt());
-           }
+        noteRepo.save(entity);
 
-           if(reqEntity.getDesc() != null){
-               entity.setDesc(reqEntity.getDesc());
-           }
+        return "Success";
+        // }catch (RuntimeException e){
+        // throw new RuntimeException(e.getMessage());
+        // }
+    }
 
-           noteRepo.save(entity);
+    public String loadHome() {
 
+        String str = "redirect:http://127.0.0.1:5500/frontend/index.html";
 
-       return "Success";
-//       }catch (RuntimeException e){
-//         throw new RuntimeException(e.getMessage());
-//       }
+        return str;
     }
 }

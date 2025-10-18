@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Handler;
 
@@ -21,22 +22,20 @@ public class NoteController {
     @Autowired
     private final NoteService service;
 
-    @GetMapping("/")
-    public ResponseEntity<List<ResNoteDto>> getAllNotes(){
+    @GetMapping("/notes")
+    private ResponseEntity<List<ResNoteDto>> getNoteById(@RequestParam(defaultValue = "0", name = "id") Long id) {
+        System.out.println(id);
+        if (id == 0) {
 
-        return service.getAllNotes();
+            return service.getAllNotes();
+        }
+
+        ResponseEntity<ResNoteDto> res = service.getById(id);
+
+        List<ResNoteDto> list = new ArrayList<>();
+        list.add(res.getBody());
+
+        return ResponseEntity.status(res.getStatusCode()).body(list);
     }
-
-    @GetMapping("/{id}")
-    private  ResponseEntity<ResNoteDto> getNoteById(@PathVariable("id") Long id){
-        return service.getById(id);
-    }
-
-
-
-
-
-
-
 
 }
