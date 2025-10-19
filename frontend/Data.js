@@ -1,6 +1,6 @@
 async function getData() {
   try {
-    let res = await axios.get("http://localhost:8081/");
+    let res = await axios.get("http://localhost:8081/notes");
 
     return res.data;
   } catch (error) {
@@ -17,5 +17,7 @@ if (res != "No response") {
     data.push(obj);
   }
 }
-
 export { data };
+
+
+
