@@ -102,7 +102,7 @@ public class NoteService {
 
     public String loadHome() {
 
-        String str = "redirect:http://127.0.0.1:5500/frontend/index.html";
+        String str = "redirect:http://127.0.0.1:5500";
 
         return str;
     }

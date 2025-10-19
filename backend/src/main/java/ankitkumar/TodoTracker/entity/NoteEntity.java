@@ -7,6 +7,7 @@ import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.*;
+import org.hibernate.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -22,7 +23,7 @@ public class NoteEntity {
     private Long id;
     @NotNull
     private String title;
-    @Column(name = "description")
+    @Column(name = "description",length = Length.LOB_DEFAULT)
     private String desc;
     LocalDate createdAt;
     @FutureOrPresent(message = "Date must be present or future")
