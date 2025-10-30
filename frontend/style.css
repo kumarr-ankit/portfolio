@@ -24,7 +24,7 @@
   --main-color-secondary: #fdfdfd;
   /* Slightly lighter for hover states or buttons */
 
-  --color-ocean: #1365bc;
+  --color-ocean: #3b9aff;
   /* Primary action button color */
   --color-ocean-secondary: #468faf;
   /* Card headers, tags */
@@ -42,6 +42,8 @@
   --color-light: #f9f9f9;
   /* Very light background — almost white but blue-tinted */
   --color-single-note-bg: #ffffff;
+
+    --info-container-bg :#b0b0b03b;
 }
 
 body {
@@ -83,6 +85,8 @@ body {
   /* Base background (almost black) */
   --color-single-note-bg: #2b2929;
   /* Slightly lighter card/note bg */
+
+    --info-container-bg :#363636;
 }
 
 /* Header Style */
@@ -153,7 +157,7 @@ body {
 
   width: 230px;
   border: 1px solid rgba(0, 0, 0, 0.216);
-  background: var(--color-single-note-bg);
+  background: var(--info-container-bg);
   justify-content: flex-end;
   align-items: center;
   box-shadow: 0px 0px 1px grey inset;
@@ -287,12 +291,16 @@ footer {
   align-items: center;
   text-align: center;
   background: var(--color-ocean);
-  border-radius: 14px;
+  border-radius: 54px;
   border: 1pt solid var(--main-color);
 
   z-index: 999;
 }
-
+#add-note i{
+margin-right: 15px;
+margin-top: 1px;
+  
+}
 #add-note:hover {
   scale: 1.01;
   box-shadow: 1px 1px 6px 1px black;
@@ -313,6 +321,7 @@ footer {
 input {
   background-color: var(--main-color);
   color: var(--appNameColor);
+  height: fit-content;
 }
 
 #form-container,
@@ -370,6 +379,7 @@ button {
   min-width: 400px;
   min-height: 52px;
   margin: 12px;
+  
   text-align: start;
   padding-left: 12px;
   border: 1px;

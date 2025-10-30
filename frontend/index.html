@@ -3,20 +3,24 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.png" />
+  <link rel="icon" id="favicon" type="image/svg+xml" href="./src/assets/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <title>Todo Tracker</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body id="body" class="lightmode">
 
   <nav id="navbar">
-      <div id="header-container">
+    <div id="header-container">
       <b> <b id="app-name">Todo Tracker</b></b>
       <span id="app-det">A simple todo app to manage day to day tasks/notes</span>
-      </div>
+    </div>
   </nav>
 
   <img src="" alt="" srcset="">
@@ -70,10 +74,8 @@
         </form>
       </div>
       <div id="add-note">
-        <img
-          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/new-sticky-note-icon-svg-download-png-11575633.png?f=webp&w=25"
-          alt="" />
-        <span>Add new todo</span>
+        <i class="fa-solid fa-white fa-note-sticky fa-2x"></i>
+        <span id="add-note-span">Add new todo</span>
       </div>
 
   </main>
@@ -85,9 +87,9 @@
     <div id="feedback-res">
       Successfully deleted <span><img src="./src/assets/success.svg" /></span>
     </div>
-    <button id="mode"><img src="./src/assets/moon2.svg" alt="darkmode" title="Enable Dark mode" id="mode-img"></button>
+    <button id="mode"><img src="./src/assets/dark.svg" alt="darkmode" title="Enable Dark mode" id="mode-img"></button>
   </footer>
-  <script type="module" src="script.js"></script>
+
 </body>
 
 </html>

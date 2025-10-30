@@ -17,6 +17,11 @@ let navbar = document.getElementById("navbar");
 let form_container = document.getElementById("form-container");
 let closeEditorBtn = document.getElementById("close-btn-editor");
 let cancelEditorBtn = document.getElementById("cancel-editor");
+//Change Favicon
+let Favicon = document.getElementById("favicon");
+Favicon.setAttribute("href","https://www.svgrepo.com/show/529022/home-smile-angle.svg");
+
+
 
 // Event listeners and API calls go here
 
@@ -52,23 +57,26 @@ Array.from(data).forEach((el) => {
   });
 
   //Handle onclick on note card
-let noteCard = document.getElementById(`${el.id}`);
+  let noteCard = document.getElementById(`${el.id}`);
 
-noteCard.addEventListener("click",()=>{
-  noteCard.style.scale = "1.05";
+  noteCard.addEventListener("click", () => {
+    noteCard.style.scale = "1.05";
     let data = {
-          title: el.title || "",
-          dueAt: el.dueAt || "",
-          desc: el.desc || ""
-        };
+      title: el.title || "",
+      dueAt: el.dueAt || "",
+      desc: el.desc || "",
+      creDate : el.createdAt || ""
+    };
 
-    let query = new URLSearchParams(data).toString();    
-  location.href = `/note.html?${query}`;
-  
+    let url = window.location.hostname;
 
-});
-  
+    let query = new URLSearchParams(data).toString();
 
+    setTimeout(() => {
+     // window.location = `${url}/note.html?${query}`;
+     location = `/note.html?${query}`;
+    }, 1000);
+  });
 });
 cancelEditorBtn.addEventListener("click", closeEdiorForm);
 
@@ -86,7 +94,7 @@ let isLight = true;
 modeBtn.addEventListener("click", (e) => {
   body.classList.toggle("dark");
   isLight = !isLight;
-  let resource = isLight ? "./src/assets/moon2.svg" : "./src/assets/sun2.svg";
+  let resource = isLight ? "./src/assets/dark.svg" : "./src/assets/sun2.svg";
   modeBtn.setAttribute("src", resource);
 });
 //Edit note 📝
@@ -125,6 +133,7 @@ function editNote(el) {
             setTimeout(() => {
               location.reload();
             }, 2000);
+            form_container.style.display = "none";
             editor_container.style.display = "none";
             console.log(reqNote);
           });
@@ -206,9 +215,14 @@ function toggleNothing(num) {
 }
 
 //nav - scroll aniamtion
+
+let note_Add_text = document.getElementById("add-note-span");
 window.addEventListener("scroll", () => {
   let scrolly = window.scrollY;
   if (scrolly > 44) {
+    note_Add_text.style.display ='none';
+    addBtn.style.paddingLeft = "30px";
+   
     navbar.style.textAlign = "start";
     navbar.style.backgroundColor = "var(--main-color)";
     navbar.style.boxShadow = "0px 0px 2px var(--main-color)";
@@ -216,5 +230,7 @@ window.addEventListener("scroll", () => {
     navbar.style.textAlign = "center";
     navbar.style.backgroundColor = "transparent";
     navbar.style.boxShadow = "unset";
+    note_Add_text.style.display ='block';
+        addBtn.style.paddingLeft = "20px";
   }
 });
