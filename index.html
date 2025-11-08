@@ -10,53 +10,84 @@
     <meta name="keywords" content="portfolio, ankit, kumar-ankit , kumarr-ankit , github, web developer">
     <meta name="robots" content="index, follow">
     <meta name="author" content="ankit kumar">
+
+
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="canonical" href="localhost:8081/">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anta&family=Michroma&family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Anta&family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <style>
+        body {
+            background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+        }
+    </style>
+
+
 
 </head>
 
 <body class="body">
-    <header class="bg-gray-300 flex w-screen bg-gray-300 w-full">
-        <h1 class="font-[Montserrat] p-2 m-2  w-full item-end font-semibold text-2xl">Ankit Kumar</h1>
+    <header class=" flex w-screen">
+        <h1 class="font-[Montserrat] p-2 m-2  w-full item-end font-semibold text-2xl collapse">Ankit Kumar</h1>
         <nav>
             <ul class="flex item-center  justify-end justify-self-end">
-                <li class="antialiased p-2 m-2 border rounded-md">About</li>
-                <li class="p-2 m-2 border rounded-md">Project</li>
-                <li class="p-2 m-2 border rounded-md">Contact</li>
+                <li
+                    class="antialiased p-2 m-2 border rounded-md  bg-gray-50  hover:bg-black hover:text-white cursor-pointer">
+                    About</li>
+                <li
+                    class="p-2 m-2  border-gray-700 rounded-md bg-gray-50  hover:bg-black hover:text-white cursor-pointer">
+                    Project</li>
+                <li class="p-2 m-2 border rounded-md  bg-gray-50  hover:bg-black hover:text-white cursor-pointer">
+                    Contact</li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div id="about">
+    <main class=" mt-10">
+        <div id="about" class="flex">
 
-            <p class="bg-gray-300 text-center bg-gray-300 m-2">
-            <h2>Hey I am Ankit Kumar</h2>
-            <p>
-                I am B.tech undergraduate , persueing from AITD Kanpur. I am on path to be a web developer.
+
+
+            <p class="my-20 ms-2 ps-2 h-fit content-center items-center flex flex-col pointer-events-none select-none">
+
+                <span class="text-black font-semibold font-[Michroma] ps-10">I’m</span>
+                <br class="collapse">
+                <span class="text-8xl font-extrabold bg-gradient-to-tr  via-black bg-clip-text  font-[Michroma] h-fit">
+                    Ankit Kumar
+                </span>
+                <br class="collapse" />
+
+                <span class="font-[Raleway]   text-start -ms-43 border-l-2 ps-2 border-gray-600 ">
+                    Turning ideas into interactive web experiences | B.Tech Student, AITD Kanpur
+
+                </span>
+
+
             </p>
-            </p>
 
 
-            <div id="img" class="w-full h-full size-full  flex justify-end">
-                <img src="https://shorturl.at/Mrc6v" alt="img" class="w-lg rounded-full-safe mr-12 my-2 select-none touch-none pointer-events-none">
+            <div id="img" class=" ms-30 h-full flex justify-end  border-stone-400 mt-4  p-2 border-r-2 ">
+                <img src="./src/assets/photo.jpg" alt="img"
+                    class="w-lg rounded-full-safe shadow-md p-0  shadow-gray-500/50 select-none touch-none pointer-events-none rounded-s-lg">
             </div>
+
         </div>
     </main>
-    <footer></footer>
+    <footer class=""></footer>
 
 </body>
 
