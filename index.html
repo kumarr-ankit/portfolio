@@ -26,6 +26,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
@@ -38,8 +39,8 @@
     </style>
 </head>
 
-<body class="body">
-    <header class="flex w-screen">
+<body class="body box-border w-screen max-w-[100%]">
+    <header class="flex box-border">
         <h1 class="font-[Montserrat] p-2 m-2 w-full item-end font-semibold text-2xl collapse">
             Ankit Kumar
         </h1>
@@ -47,24 +48,24 @@
             <ul class="flex item-center justify-end justify-self-end">
                 <li
                     class="antialiased p-2 m-2 border rounded-md bg-gray-50 hover:bg-black hover:text-white cursor-pointer">
-                    About
+                    <a href="#about">About</a>
                 </li>
                 <li
                     class="p-2 m-2 border-gray-700 rounded-md bg-gray-50 hover:bg-black hover:text-white cursor-pointer">
-                    Project
+                    <a href="#projects">Project</a>
                 </li>
                 <li class="p-2 m-2 border rounded-md bg-gray-50 hover:bg-black hover:text-white cursor-pointer">
-                    Contact
+                    <a href="#contacts">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main class="mt-10">
-        <div id="about" class="flex ms-8">
+        <div id="about" class="flex ms-8 box-border min-h-screen">
             <div>
                 <div
-                    class="my-20 ms-2 ps-2 h-fit content-center items-center flex flex-col pointer-events-none select-none">
+                    class="my-20 ms-2 box-border ps-2 h-fit content-center items-center flex flex-col pointer-events-none select-none">
                     <span class="text-black font-semibold font-[Michroma] ps-10">I’m</span>
                     <br class="collapse" />
                     <span
@@ -75,17 +76,19 @@
 
                     <span class="text-start -ms-43 border-l-2 ps-2 border-gray-600 font-[Raleway]">
                         Turning ideas into interactive web experiences | B.Tech Student,
-                        AITD Kanpur
+                        AITD Kanpur <i class="fa-solid fa-square-down"></i>
+                        <wa-icon name="square-down"></wa-icon>
+                        <wa-icon name="download"></wa-icon>
                     </span>
                 </div>
 
-                <div class="h-fit ms-1 w-full ps-3">
+                <div class="h-fit -mt-8 ms-1 w-full ps-3">
                     <ul class="flex flex-wrap justify-stretch gap-2">
                         <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-node" type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                 <img src="https://www.svgrepo.com/show/512400/javascript-155.svg" class="w-12"
-                                    alt="JS Logo">
+                                    alt="JS Logo" />
                             </button>
                             <div id="tooltip-node" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -97,7 +100,7 @@
                         <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-java" type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                <img src="./src/assets/java.svg" class="w-12" alt="Java Logo">
+                                <img src="./src/assets/java.svg" class="w-12" alt="Java Logo" />
                             </button>
                             <div id="tooltip-java" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -109,7 +112,7 @@
                         <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-cpp" type="button"
                                 class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                <img src="./src/assets/cpp.svg" class="w-12" alt="C++ Logo">
+                                <img src="./src/assets/cpp.svg" class="w-12" alt="C++ Logo" />
                             </button>
                             <div id="tooltip-cpp" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -122,7 +125,7 @@
                             <button data-tooltip-target="tooltip-html" type="button"
                                 class="text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                 <img src="https://www.svgrepo.com/show/512355/html-124.svg" class="w-12"
-                                    alt="HTML Logo">
+                                    alt="HTML Logo" />
                             </button>
                             <div id="tooltip-html" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -134,7 +137,8 @@
                         <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-css" type="button"
                                 class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                <img src="https://www.svgrepo.com/show/508795/css3-02.svg" class="w-12" alt="CSS Logo">
+                                <img src="https://www.svgrepo.com/show/508795/css3-02.svg" class="w-12"
+                                    alt="CSS Logo" />
                             </button>
                             <div id="tooltip-css" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -146,7 +150,8 @@
                         <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-react" type="button"
                                 class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                <img src="https://www.svgrepo.com/show/368912/react.svg" class="w-12" alt="React Logo">
+                                <img src="https://www.svgrepo.com/show/368912/react.svg" class="w-12"
+                                    alt="React Logo" />
                             </button>
                             <div id="tooltip-react" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -158,7 +163,7 @@
                         <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-sql" type="button"
                                 class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                                <img src="https://www.svgrepo.com/show/341068/sql.svg" class="w-12" alt="SQL Logo">
+                                <img src="https://www.svgrepo.com/show/341068/sql.svg" class="w-12" alt="SQL Logo" />
                             </button>
                             <div id="tooltip-sql" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -171,7 +176,7 @@
                             <button data-tooltip-target="tooltip-spring" type="button"
                                 class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                 <img src="https://www.svgrepo.com/show/333604/spring-boot.svg" class="w-12"
-                                    alt="Spring Boot Logo">
+                                    alt="Spring Boot Logo" />
                             </button>
                             <div id="tooltip-spring" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -180,11 +185,11 @@
                             </div>
                         </li>
 
-                            <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
                             <button data-tooltip-target="tooltip-firebase" type="button"
                                 class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                 <img src="https://www.svgrepo.com/show/369292/firebase.svg" class="w-12"
-                                    alt="Firebase Logo">
+                                    alt="Firebase Logo" />
                             </button>
                             <div id="tooltip-firebase" role="tooltip"
                                 class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
@@ -195,13 +200,146 @@
                     </ul>
 
                     <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+                </div>
 
+                <div class="mt-28 ms-68">
+                    <div>
+                        <wa-icon name="cloud-arrow-down"></wa-icon>
+                        <a class="group relative inline-block overflow-hidden border-2 rou0ded-md bg-gray-700 font-[Raleway] rounded-sm px-8 py-3"
+                            href="https://drive.google.com/file/d/1mMO9-5W-TgG3mrEsnhCSCZoU5BIMjiOH/view?usp=drivesdk"
+                            target="_blank">
+                            <span
+                                class="absolute inset-y-0 left-0 w-0.5 bg-gray-950 transition-all group-hover:w-full"></span>
+
+                            <span
+                                class="relative text-sm font-medium text-white transition-colors group-hover:text-white">
+                                Download CV <span class="mx-1"></span>
+                                <i class="fa-solid fa-file"></i>
+                            </span>
+                        </a>
+
+                        <div id="progress_bar_changer"></div>
+                    </div>
                 </div>
             </div>
 
             <div id="img" class="ms-30 h-full flex justify-end border-stone-400 mt-4 p-2 border-r-2">
                 <img src="./src/assets/photo_ankit.jpg" alt="img"
                     class="w-lg rounded-full-safe shadow-md p-0 shadow-gray-500/50 select-none touch-none pointer-events-none rounded-s-lg" />
+            </div>
+        </div>
+
+        <div id="projects" class="flex min-h-screen">
+            <div>
+                <div class="ms-8 mt-4">
+                    <ul class="flex flex-wrap justify-around gap-x-4 gap-y-8">
+                        <li>
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                                <img class="rounded-t-lg" src="./src/assets/todotracker.png" alt="" />
+
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            TodoTracker
+                                        </h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        Create, edit, and organize your notes—simple, personal,
+                                        and stored safely in your browser.
+                                    </p>
+                                    <a href="https://kumarr-ankit.github.io/TodoTracker"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white border-2 mt-6 rounded-lg hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Read more
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="contacts" class="min-h-screen">
+            <div>
+                <ul class="flex gap-4">
+                    <li>
+                        <button data-tooltip-target="tooltip-github" data-tooltip-style="light" type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a href="https://github.com/kumarr-ankit" target="_blank">
+                                <img src="https://www.svgrepo.com/show/512317/github-142.svg" class="w-11 mt-2"  alt="GitHub">
+                            </a>
+                        </button>
+                        <div id="tooltip-github" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-200 rounded-lg shadow-xs opacity-0 tooltip">
+                            GitHub
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button data-tooltip-target="tooltip-linkedin" data-tooltip-style="light" type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a href="https://www.linkedin.com/in/ankit-kumar" target="_blank">
+                                <img src="https://www.svgrepo.com/show/512419/linkedin-161.svg" class="w-12" alt="LinkedIn">
+                            </a>
+                        </button>
+                        <div id="tooltip-linkedin" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-200 rounded-lg shadow-xs opacity-0 tooltip">
+                            LinkedIn
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button data-tooltip-target="tooltip-portfolio" data-tooltip-style="light" type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a href="https://ankit-portfolio.vercel.app" target="_blank">
+                                <img src="https://www.svgrepo.com/show/330519/gmail.svg" class="w-12 mt-2" alt="Portfolio">
+                            </a>
+                        </button>
+                        <div id="tooltip-portfolio" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-200 rounded-lg shadow-xs opacity-0 tooltip">
+                            Portfolio
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </li>
+
+                        <li>
+                        <button data-tooltip-target="tooltip-portfolio" data-tooltip-style="light" type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a href="https://ankit-portfolio.vercel.app" target="_blank">
+                                <img src="https://www.svgrepo.com/show/513008/twitter-154.svg" class="w-12 mt-2" alt="Portfolio">
+                            </a>
+                        </button>
+                        <div id="tooltip-portfolio" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-200 rounded-lg shadow-xs opacity-0 tooltip">
+                            Portfolio
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </li>
+
+                       <li>
+                        <button data-tooltip-target="tooltip-portfolio" data-tooltip-style="light" type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <a href="https://ankit-portfolio.vercel.app" target="_blank">
+                                <img src="https://www.svgrepo.com/show/491468/phone.svg" class="w-12 mt-2" alt="Portfolio">
+                            </a>
+                        </button>
+                        <div id="tooltip-portfolio" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-200 rounded-lg shadow-xs opacity-0 tooltip">
+                            Portfolio
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </main>
