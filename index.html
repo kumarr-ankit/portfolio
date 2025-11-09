@@ -2,93 +2,211 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ankit's Profile</title>
 
-    <meta name="description" content="Hey, I am Ankit Kumar.I am a web developer.">
-    <meta name="keywords" content="portfolio, ankit, kumar-ankit , kumarr-ankit , github, web developer">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="ankit kumar">
+    <meta name="description" content="Hey, I am Ankit Kumar.I am a web developer." />
+    <meta name="keywords" content="portfolio, ankit, kumar-ankit , kumarr-ankit , github, web developer" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ankit kumar" />
+    <script src="./component.js"></script>
 
-
-    <link rel="stylesheet" href="./output.css">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="canonical" href="localhost:8081/">
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="canonical" href="localhost:8081/" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Anta&family=Michroma&family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Anta&family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Anta&family=Momo+Trust+Display&family=Montserrat&family=Prosto+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
     </style>
     <style>
         body {
             background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
         }
     </style>
-
-
-
 </head>
 
 <body class="body">
-    <header class=" flex w-screen">
-        <h1 class="font-[Montserrat] p-2 m-2  w-full item-end font-semibold text-2xl collapse">Ankit Kumar</h1>
-        <nav>
-            <ul class="flex item-center  justify-end justify-self-end">
+    <header class="flex w-screen">
+        <h1 class="font-[Montserrat] p-2 m-2 w-full item-end font-semibold text-2xl collapse">
+            Ankit Kumar
+        </h1>
+        <nav class="pe-8">
+            <ul class="flex item-center justify-end justify-self-end">
                 <li
-                    class="antialiased p-2 m-2 border rounded-md  bg-gray-50  hover:bg-black hover:text-white cursor-pointer">
-                    About</li>
+                    class="antialiased p-2 m-2 border rounded-md bg-gray-50 hover:bg-black hover:text-white cursor-pointer">
+                    About
+                </li>
                 <li
-                    class="p-2 m-2  border-gray-700 rounded-md bg-gray-50  hover:bg-black hover:text-white cursor-pointer">
-                    Project</li>
-                <li class="p-2 m-2 border rounded-md  bg-gray-50  hover:bg-black hover:text-white cursor-pointer">
-                    Contact</li>
+                    class="p-2 m-2 border-gray-700 rounded-md bg-gray-50 hover:bg-black hover:text-white cursor-pointer">
+                    Project
+                </li>
+                <li class="p-2 m-2 border rounded-md bg-gray-50 hover:bg-black hover:text-white cursor-pointer">
+                    Contact
+                </li>
             </ul>
         </nav>
     </header>
-    <main class=" mt-10">
-        <div id="about" class="flex">
 
+    <main class="mt-10">
+        <div id="about" class="flex ms-8">
+            <div>
+                <div
+                    class="my-20 ms-2 ps-2 h-fit content-center items-center flex flex-col pointer-events-none select-none">
+                    <span class="text-black font-semibold font-[Michroma] ps-10">I’m</span>
+                    <br class="collapse" />
+                    <span
+                        class="text-8xl font-extrabold bg-gradient-to-tr via-black bg-clip-text font-[Michroma] h-fit">
+                        Ankit Kumar
+                    </span>
+                    <br class="collapse" />
 
+                    <span class="text-start -ms-43 border-l-2 ps-2 border-gray-600 font-[Raleway]">
+                        Turning ideas into interactive web experiences | B.Tech Student,
+                        AITD Kanpur
+                    </span>
+                </div>
 
-            <p class="my-20 ms-2 ps-2 h-fit content-center items-center flex flex-col pointer-events-none select-none">
+                <div class="h-fit ms-1 w-full ps-3">
+                    <ul class="flex flex-wrap justify-stretch gap-2">
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-node" type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/512400/javascript-155.svg" class="w-12"
+                                    alt="JS Logo">
+                            </button>
+                            <div id="tooltip-node" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                JavaScript
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
-                <span class="text-black font-semibold font-[Michroma] ps-10">I’m</span>
-                <br class="collapse">
-                <span class="text-8xl font-extrabold bg-gradient-to-tr  via-black bg-clip-text  font-[Michroma] h-fit">
-                    Ankit Kumar
-                </span>
-                <br class="collapse" />
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-java" type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="./src/assets/java.svg" class="w-12" alt="Java Logo">
+                            </button>
+                            <div id="tooltip-java" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                Java
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
-                <span class="font-[Raleway]   text-start -ms-43 border-l-2 ps-2 border-gray-600 ">
-                    Turning ideas into interactive web experiences | B.Tech Student, AITD Kanpur
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-cpp" type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="./src/assets/cpp.svg" class="w-12" alt="C++ Logo">
+                            </button>
+                            <div id="tooltip-cpp" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                C++
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
-                </span>
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-html" type="button"
+                                class="text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/512355/html-124.svg" class="w-12"
+                                    alt="HTML Logo">
+                            </button>
+                            <div id="tooltip-html" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                HTML5
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-css" type="button"
+                                class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/508795/css3-02.svg" class="w-12" alt="CSS Logo">
+                            </button>
+                            <div id="tooltip-css" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                CSS3
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
-            </p>
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-react" type="button"
+                                class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/368912/react.svg" class="w-12" alt="React Logo">
+                            </button>
+                            <div id="tooltip-react" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                React
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-sql" type="button"
+                                class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/341068/sql.svg" class="w-12" alt="SQL Logo">
+                            </button>
+                            <div id="tooltip-sql" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                SQL
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
 
-            <div id="img" class=" ms-30 h-full flex justify-end  border-stone-400 mt-4  p-2 border-r-2 ">
-                <img src="./src/assets/photo.jpg" alt="img"
-                    class="w-lg rounded-full-safe shadow-md p-0  shadow-gray-500/50 select-none touch-none pointer-events-none rounded-s-lg">
+                        <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-spring" type="button"
+                                class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/333604/spring-boot.svg" class="w-12"
+                                    alt="Spring Boot Logo">
+                            </button>
+                            <div id="tooltip-spring" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                Spring Boot
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
+
+                            <li class="font-bold py-2 px-2 border-t-4 border-r-red-700">
+                            <button data-tooltip-target="tooltip-firebase" type="button"
+                                class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                                <img src="https://www.svgrepo.com/show/369292/firebase.svg" class="w-12"
+                                    alt="Firebase Logo">
+                            </button>
+                            <div id="tooltip-firebase" role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip">
+                                Firebase
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
+
+                </div>
             </div>
 
+            <div id="img" class="ms-30 h-full flex justify-end border-stone-400 mt-4 p-2 border-r-2">
+                <img src="./src/assets/photo_ankit.jpg" alt="img"
+                    class="w-lg rounded-full-safe shadow-md p-0 shadow-gray-500/50 select-none touch-none pointer-events-none rounded-s-lg" />
+            </div>
         </div>
     </main>
     <footer class=""></footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
